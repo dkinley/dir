@@ -10,6 +10,6 @@ app.use(cors());
 // setup mongodb
 require('./config/mongoose.config');
 // setup routes
-require('./routes/dir.routes')(app);
+require('./routes/profile.routes')(app);
 
 app.listen(port, () => console.log("Listening on port:  " + port));
