@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'; // anything exported as default does not require {}
+import GetAll from './components/AllProfiles';
+import New from './components/CreateProfile';
+import Edit from './components/EditProfile';
+import Details from './components/ProfileDetails';
+import { Router } from '@reach/router'; // since router is not exported as default {} are required
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header className="header"></Header>
+      <Router>
+        <GetAll path="/" />
+        <New path="/profile/new" />
+        <Details path="/profile/:id" />
+        <Edit path="/profile/:id/edit" />
+      </Router>
     </div>
   );
 }
-
 export default App;

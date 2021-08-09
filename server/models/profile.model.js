@@ -14,7 +14,7 @@ const ProfileSchema = new mongoose.Schema({
         maxlength: [51, "Sorry, the last name must be abreviated to be less than 50 characters."],
     },
     licenseMain: {
-        type: Number,
+        type: String,
     },
     licenseMainState: {
         type: String,
@@ -27,7 +27,7 @@ const ProfileSchema = new mongoose.Schema({
         type: Number,
     },
 
-    email: {
+    emailMain: {
         type: String,
     },
 
@@ -57,4 +57,4 @@ const ProfileSchema = new mongoose.Schema({
 // the string to export that you use here is the name of the collection inside of the db
 // the collection name will be lowercase, regardless of how you type it
 // 2nd piece to export is the schema
-module.exports = mongoose.model("Movie", MovieSchema);
+module.exports = mongoose.model("Profile", ProfileSchema);
