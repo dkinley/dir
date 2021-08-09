@@ -49,7 +49,9 @@ const ProfileSchema = new mongoose.Schema({
             "Keller Williams",
             "Sotheby's"
             ], 
-    }
+    },
+
+    companyCurrentLogo: { type: String },
 
 
 }, { timestamps: true }); // need it! this is the options of the Schema, required

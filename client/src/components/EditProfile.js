@@ -12,6 +12,7 @@ const Edit = (props) => {
     const [ website, setWebsite ] = useState("");
     const [ pictureUrl, setPictureUrl ] = useState("");
     const [ companyCurrent, setCompanyCurrent ] = useState("");
+    const [ companyCurrentLogo, setCompanyCurrentLogo ] = useState(""); 
     const [ errs, setErrs ] = useState({});
 
     useEffect(() => {
@@ -27,6 +28,7 @@ const Edit = (props) => {
                 setWebsite(profile.setWebsite);
                 setPictureUrl(profile.pictureUrl);
                 setCompanyCurrent(profile.companyCurrent);
+                setCompanyCurrentLogo(profile.companyCurrentLogo);
             })
 
             .catch((err) => {
@@ -45,6 +47,7 @@ const Edit = (props) => {
             website: website,
             pictureUrl: pictureUrl,
             companyCurrent: companyCurrent,
+            companyCurrentLogo: companyCurrentLogo,
 
             }) //axios sends data, use postman url, add .then, .catch
             .then((res) => {
@@ -167,6 +170,19 @@ const Edit = (props) => {
                     {
                         errs.companyCurrent ?
                         <span className="error-text">{errs.companyCurrent.message}</span>
+                            : null
+                    }
+                </div>
+                <div>
+                    <label> Company Logo: </label>
+                    <input type="text"
+                    name="companyCurrentLogo"
+                    value={companyCurrentLogo}
+                    onChange={ (e) => setCompanyCurrentLogo( e.target.value ) }
+                    />
+                    {
+                        errs.companyCurrentLogo ?
+                        <span className="error-text">{errs.companyCurrentLogo.message}</span>
                             : null
                     }
                 </div>
