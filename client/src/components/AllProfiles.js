@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, navigate } from '@reach/router';
 import axios from 'axios';
-// import DeleteButton from './DeleteButton';
+import DeleteButton from './DeleteButton';
 
 const GetAll = (props) => {
     const [ allProfiles, setAllProfiles ] = useState([]); // put in an array, as there is an array of objects expected, see postman which gets back and array of objects
@@ -33,6 +33,7 @@ const GetAll = (props) => {
                                 <br/>
                                 <Link to={ `/profile/${profile._id}`} >{profile.firstName}{" "}{profile.lastName} </Link>
                                 <p>Top Producer 10 Years in a Row</p>
+                                <DeleteButton _id={ profile._id }/>
                                 <img src={profile.companyCurrentLogo} alt={profile.companyCurrent}/>
                             </td>
                     </tr>
