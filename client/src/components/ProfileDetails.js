@@ -22,12 +22,11 @@ const ProfileDetails = (props) => {
     return (
         <div>
                 <img src={profile.pictureUrl} alt={profile.firstName}/>
+                <div className="largerText">{profile.firstName}{" "}{profile.lastName} </div>
                 <div className="buttonsCenter">
                     <button><a href="tel:{profile.cell}">Call {profile.firstName} Now</a></button>
                     <button><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
-                    <button><a href="https://www.yelp.com/biz/mark-choey-climb-real-estate-san-francisco-2">{ profile.firstName }'s Reviews</a></button>
                 </div>
-                <br/>
                 <div class="center">
                 <table>
                     <th></th>
@@ -35,7 +34,7 @@ const ProfileDetails = (props) => {
                     <th></th>
                     <tr>
                     <td>
-                        TopOffer Agent:
+                        Top Agent:
                     </td>
                     <td>
                         { profile.firstName } { profile.lastName }
@@ -49,7 +48,7 @@ const ProfileDetails = (props) => {
                         Designation:
                     </td>
                     <td>
-                        Career $750,000,000 Sold
+                        Career $750,000,000
                     </td>
                     <td>
                         Top 1% San Francisco
