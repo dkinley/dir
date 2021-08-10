@@ -3,9 +3,9 @@ import { Link, navigate } from '@reach/router';
 
 const Header = (props) => {
     return (
-        <div>
-            <h1>Top Offer</h1>
-        </div>
+            <header>
+                <img src="../leaderBoard4.png"/>
+            </header>
     )
 };
 export default Header;

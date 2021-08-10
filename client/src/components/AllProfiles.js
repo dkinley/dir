@@ -23,8 +23,6 @@ const GetAll = (props) => {
             <table>
                 <thead>
                     <th></th>
-                    <th>Accolades</th>
-                    <th>Company</th>
                 </thead>
                 <tbody>
                     {
@@ -34,11 +32,7 @@ const GetAll = (props) => {
                                 <img src={profile.pictureUrl} alt={profile.firstName}/>
                                 <br/>
                                 <Link to={ `/profile/${profile._id}`} >{profile.firstName}{" "}{profile.lastName} </Link>
-                            </td>
-                            <td>
-                                <p>Top Producer 10 Years in Row</p>
-                            </td>
-                            <td>
+                                <p>Top Producer 10 Years in a Row</p>
                                 <img src={profile.companyCurrentLogo} alt={profile.companyCurrent}/>
                             </td>
                     </tr>
