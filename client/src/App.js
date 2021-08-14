@@ -1,5 +1,4 @@
 import './App.css';
-import Header from './components/Header'; // anything exported as default does not require {}
 import GetAll from './components/AllProfiles';
 import New from './components/CreateProfile';
 import Edit from './components/EditProfile';
