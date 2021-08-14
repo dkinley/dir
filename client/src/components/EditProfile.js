@@ -189,7 +189,7 @@ const Edit = (props) => {
                 <div>
                 <button type="submit">Update Profile</button>
                 <button onClick={ () => navigate("/")}>Cancel</button>
-                <DeleteButton _id={ "/profile/" + props.id }/>
+                <DeleteButton className="deleteBtn" _id={ "/profile/" + props.id }/>
                 </div>
             </form>
         </div>

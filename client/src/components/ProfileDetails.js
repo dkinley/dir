@@ -28,7 +28,7 @@ const ProfileDetails = (props) => {
                     <button><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
                 </div>
                 <div class="center">
-                <table>
+                <table className="table">
                     <th></th>
                     <th></th>
                     <th></th>
@@ -66,7 +66,7 @@ const ProfileDetails = (props) => {
                     </td>
                     </tr>
             </table>
-            <table>
+            <table className="table">
             <th>Yr.</th>
             <th>Firm</th>
             <th>$Vol</th>
@@ -136,7 +136,7 @@ const ProfileDetails = (props) => {
             
             </table>
 
-                <button class="button" onClick={ () => navigate("/")}>___________________________________________________________</button>
+                <button className="button" onClick={ () => navigate("/")}>___________________________________________________________</button>
                 Copyright ©2021, Leaderboard, Inc. All Rights Reserved.   
             </div>
             </div>
