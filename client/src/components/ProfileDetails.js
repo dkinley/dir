@@ -21,8 +21,8 @@ const ProfileDetails = (props) => {
 
     return (
         <div>
-                <img src={profile.pictureUrl} alt={profile.firstName}/>
-                <div className="largerText">{profile.firstName}{" "}{profile.lastName} </div>
+                <div className="header">{ profile.firstName } { profile.lastName }  | Top Agent</div>
+                <img src={profile.pictureUrl} alt={profile.firstName} />
                 <div className="buttonsCenter">
                     <button><a href="tel:{profile.cell}">Call {profile.firstName} Now</a></button>
                     <button><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>

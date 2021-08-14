@@ -9,7 +9,6 @@ import { Router } from '@reach/router'; // since router is not exported as defau
 function App() {
   return (
     <div className="App">
-      <Header className="header"></Header>
       <Router>
         <GetAll path="/" />
         <New path="/profile/new" />
