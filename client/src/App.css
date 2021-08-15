@@ -5,7 +5,9 @@
   margin: 10pt;
   border-radius: 5px;
   background: linear-gradient(#f8f6f6, #838181);
-  display: flex;  
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;  
   flex-direction: column;
   align-items: center;
   justify-content: center;

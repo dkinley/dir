@@ -23,6 +23,11 @@ const ProfileDetails = (props) => {
         <div>
                 <div className="header">{ profile.firstName } { profile.lastName }  | Top Agent</div>
                 <img src={profile.pictureUrl} alt={profile.firstName} />
+                <div>Real Estate isn’t rocket science, but it’s definitely harder than it needs to be. Why is that? 
+                Why is it, quite frankly, a pain? We ask ourselves that every day. That is our guiding light. 
+                HighNote Labs is where we ask “What if?” and “How can we?” as open-ended questions that drive innovation. 
+                It is our experimentation studio, our innovation hub, our intersection of technology and design. It’s where 
+                we play with ideas and design great products that change the way we do real estate.</div>
                 <div className="buttonsCenter">
                     <button><a href="tel:{profile.cell}">Call {profile.firstName} Now</a></button>
                     <button><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
