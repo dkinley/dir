@@ -15,15 +15,39 @@
 
 .header {
   width: auto;
-  margin: 10px;
+  margin: 10px 10px 10px 10px;
   padding: 10px;
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   justify-content: center;
-  font-size:x-large;
   font-family: serif;
+}
+.upper-header {
+  font-size: x-large;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.lower-header {
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+}
+
+.profile-pic-deets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 0px, 20px, 0px, 20px;
 }
 
 .largerText {
@@ -49,10 +73,30 @@
 
 .buttonsCenter {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 0px;
   padding: 0px;
+}
+
+.img {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box; 
+  align-items: center;
+  justify-content: center;
+}
+
+.bio {
+  display: flex;
+  font-size: 1.1em;
+  flex-wrap: wrap;
+  box-sizing: border-box; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 h1, h3, h4, h5, h6 {
@@ -69,7 +113,7 @@ h2 {
 table {
   width: auto;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 20px;
   margin: 10px;
   text-align: center;
 }
@@ -106,8 +150,9 @@ input, select {
 
 button {
   width:max-content;
+  height: 50px;
   margin: 10px 10px;
-  font-weight: 300;
+  font-weight: 800;
   font-family:Arial, Helvetica, sans-serif;
   padding: 10px 20px;
   border: none;
@@ -115,6 +160,15 @@ button {
   cursor: pointer;
   color: white;
   background-color: #00A2ED;background: linear-gradient(#AAC5FC, #FFFFFF);
+}
+
+.bio-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px, 20px, 0px, 20px;
+  padding: 20px;
 }
 
 .error-text {

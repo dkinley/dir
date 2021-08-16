@@ -21,56 +21,25 @@ const ProfileDetails = (props) => {
 
     return (
         <div>
-                <div className="header">{ profile.firstName } { profile.lastName }  | Top Agent</div>
-                <img src={profile.pictureUrl} alt={profile.firstName} />
-                <div>Real Estate isn’t rocket science, but it’s definitely harder than it needs to be. Why is that? 
-                Why is it, quite frankly, a pain? We ask ourselves that every day. That is our guiding light. 
-                HighNote Labs is where we ask “What if?” and “How can we?” as open-ended questions that drive innovation. 
-                It is our experimentation studio, our innovation hub, our intersection of technology and design. It’s where 
-                we play with ideas and design great products that change the way we do real estate.</div>
-                <div className="buttonsCenter">
-                    <button><a href="tel:{profile.cell}">Call {profile.firstName} Now</a></button>
-                    <button><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
+                <div className="header">
+                    <div className="upper-header">{ profile.firstName } { profile.lastName }  | Top 1% Agent</div>
+                    <br/>
+                    <div className="lower-header"> { profile.licenseMainState } License { profile.licenseMain } at { profile.companyCurrent }</div>
                 </div>
-                <div class="center">
-                <table className="table">
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <tr>
-                    <td>
-                        Top Agent:
-                    </td>
-                    <td>
-                        { profile.firstName } { profile.lastName }
-                    </td>
-                    <td>
-                        <a href="tel:{profile.cell}">{profile.cell}</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>
-                        Designation:
-                    </td>
-                    <td>
-                        Career $750,000,000
-                    </td>
-                    <td>
-                        Top 1% San Francisco
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>
-                        Registration:
-                    </td>
-                    <td>
-                        { profile.licenseMainState } { profile.licenseMain }
-                    </td>
-                    <td>
-                        { profile.companyCurrent }
-                    </td>
-                    </tr>
-            </table>
+                <div className="profile-pic-deets"> 
+                    <img class="img" src={profile.pictureUrl} alt={profile.firstName} />
+                    <div className="bio-btn"> 
+                        <div class="bio">Real Estate isn’t rocket science, but it’s definitely harder than it needs to be. Why is that? 
+                        Why is it, quite frankly, a pain? We ask ourselves that every day. That is our guiding light. 
+                        Mark's team asks “What if?” and “How can we?” as open-ended questions that drive innovation. 
+                        It is our experimentation studio, our innovation hub, our intersection of technology and design. It’s where 
+                        we play with ideas and design great products that change the way we do real estate.</div>
+                        <div className="buttonsCenter">
+                        <button><a href="tel:{profile.cell}">Call {profile.firstName}</a></button>
+                        <button><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
+                        </div>
+                    </div>
+                </div>
             <table className="table">
             <th>Yr.</th>
             <th>Firm</th>
@@ -78,6 +47,26 @@ const ProfileDetails = (props) => {
             <th>Deals</th>
             <th>Buyers</th>
             <th>Sellers</th>
+            <tr>
+                <td>
+                Career
+                </td>
+                <td>
+                { profile.companyCurrent }
+                </td>
+                <td>
+                762,000,000
+                </td>
+                <td>
+                655
+                </td>
+                <td>
+                301
+                </td>
+                <td>
+                354
+                </td>
+            </tr>
             <tr>
                 <td>
                 2021
@@ -144,8 +133,6 @@ const ProfileDetails = (props) => {
                 <button className="button" onClick={ () => navigate("/")}>___________________________________________________________</button>
                 Copyright ©2021, Leaderboard, Inc. All Rights Reserved.   
             </div>
-            </div>
-            
     )
 };
 export default ProfileDetails;
