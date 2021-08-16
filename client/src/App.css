@@ -21,7 +21,7 @@
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   justify-content: center;
   font-family: serif;
 }
@@ -72,12 +72,14 @@
 }
 
 .buttonsCenter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0px;
-  padding: 0px;
+  display: block;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 0px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .img {
@@ -86,6 +88,7 @@
   box-sizing: border-box; 
   align-items: center;
   justify-content: center;
+  margin-bottom: 0px;
 }
 
 .bio {
@@ -95,7 +98,7 @@
   box-sizing: border-box; 
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -113,9 +116,11 @@ h2 {
 table {
   width: auto;
   border-collapse: collapse;
-  border-radius: 20px;
-  margin: 10px;
-  text-align: center;
+  margin: 0px 20px 0px 20px;
+  text-align: right;
+  display: block;
+  width: 100%;
+  border: none;
 }
 
 th {
@@ -159,7 +164,16 @@ button {
   border-radius: 4px;
   cursor: pointer;
   color: white;
-  background-color: #00A2ED;background: linear-gradient(#AAC5FC, #FFFFFF);
+  background-color: #00A2ED;background: linear-gradient(#AAC5FC,#6092F5);
+}
+
+.container{
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  background-position: center;
+  border-radius: 5px;
+  
 }
 
 .bio-btn {
@@ -167,7 +181,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px, 20px, 0px, 20px;
+  margin: 0px, 10px, 0px, 10px;
   padding: 20px;
 }
 
