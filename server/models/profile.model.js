@@ -19,8 +19,10 @@ const ProfileSchema = new mongoose.Schema({
     licenseMainState: {
         type: String,
         required: [ true, "The License State is required."],  //true - this is a required field, the 2nd part is the requirement
-        enum: [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ],
-        minlength: [2, "State code must be two digits"],
+        enum: [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 
+        'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 
+        'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 
+        'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ],
     },
 
     cell: {
@@ -41,13 +43,11 @@ const ProfileSchema = new mongoose.Schema({
         type: String,  //this is the validation for a product
         required: [ true, ""],  //true - this is a required field, the 2nd part is the requirement
         enum: [
-            "Berkshire Hathaway",
-            "Coldwell Banker",
-            "Compass",
-            "Homesmart",
-            "Exp",
-            "Keller Williams",
-            "Sotheby's"
+            '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
+            'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
+            'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
+            'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
+            'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
             ], 
     },
 

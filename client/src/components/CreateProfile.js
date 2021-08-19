@@ -14,6 +14,23 @@ const New = (props) => {
     const [ companyCurrentLogo, setCompanyCurrentLogo ] = useState(); 
     const [ errs, setErrs ] = useState({});
 
+    const states = [
+        'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC',
+        'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 
+        'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 
+        'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 
+        'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 
+        'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY'
+    ];
+
+    const companies = [
+        '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
+        'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
+        'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
+        'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
+        'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
+    ];
+
     const submitHandler = (e) => {
         e.preventDefault(); //bring in the event with 'e' and prevent default refresh
 
@@ -92,16 +109,18 @@ const New = (props) => {
 
                 <div>
                     <label> License State: </label>
-                    {
-                        errs.licenseMainState ?
-                        <span className="error-text">{errs.licenseMainState.message}</span>
-                            : null
-                    }
-                    <input type="text"
+                    <select 
                     name="licenseMainState"
                     value={licenseMainState}
                     onChange={ (e) => setLicenseMainState( e.target.value ) }
-                    />
+                    >
+                        <option value=""></option>
+                        {
+                            states.map((licenseMainState, index) => (
+                                    <option value={licenseMainState} key={licenseMainState}>{licenseMainState}</option>
+                            ))
+                        }
+                        </select>
                 </div>
                 <div>
                     <label> Direct Phone Number: </label>
@@ -146,19 +165,21 @@ const New = (props) => {
 
                 <div>
                     <label> Company: </label>
-                    {
-                        errs.companyCurrent ?
-                        <span className="error-text">{errs.companyCurrent.message}</span>
-                            : null
-                    }
-                    <input type="text"
+                    <select
                     name="companyCurrent"
                     value={companyCurrent}
                     onChange={ (e) => setCompanyCurrent( e.target.value ) }
-                    />
+                    >
+                    <option value=""></option>
+                    {
+                        companies.map((companyCurrent, index) => (
+                                <option value={companyCurrent} key={companyCurrent}>{companyCurrent}</option>
+                        ))
+                    }
+                </select>
                 </div>
                 <div>
-                    <label> Company Logo: </label>
+                    <label> Company Logo (optional): </label>
                     {
                         errs.companyCurrentLogo ?
                         <span className="error-text">{errs.companyCurrentLogo.message}</span>
