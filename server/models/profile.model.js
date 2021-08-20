@@ -53,6 +53,11 @@ const ProfileSchema = new mongoose.Schema({
 
     companyCurrentLogo: { type: String },
 
+    about: {
+        type: String,  //this is the validation for a profile
+        maxlength: [, "Sorry, the about section must be abreviated to be less than 1000 characters."],
+    },
+
 
 }, { timestamps: true }); // need it! this is the options of the Schema, required
 

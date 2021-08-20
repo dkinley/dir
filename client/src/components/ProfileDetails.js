@@ -51,7 +51,7 @@ const ProfileDetails = (props) => {
                         Career
                         </td>
                         <td>
-                        { profile.companyCurrent }
+                        <img src={profile.companyCurrent} alt={profile.companyCurrent}/>
                         </td>
                         <td>
                         762,000,000

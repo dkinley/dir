@@ -11,7 +11,8 @@ const New = (props) => {
     const [ website, setWebsite ] = useState();
     const [ pictureUrl, setPictureUrl ] = useState();
     const [ companyCurrent, setCompanyCurrent ] = useState();
-    const [ companyCurrentLogo, setCompanyCurrentLogo ] = useState(); 
+    const [ companyCurrentLogo, setCompanyCurrentLogo ] = useState();
+    const [ about, setAbout] = useState(); 
     const [ errs, setErrs ] = useState({});
 
     const states = [
@@ -44,6 +45,7 @@ const New = (props) => {
             pictureUrl: pictureUrl,
             companyCurrent: companyCurrent,
             companyCurrentLogo: companyCurrentLogo,
+            about: about,
 
             }) //axios sends data, use postman url, add .then, .catch
             .then((res) => {
@@ -63,7 +65,8 @@ const New = (props) => {
 
     return (
         <div>
-            <h1>New Profile</h1> 
+            <h1>New Profile</h1>
+            <div className="createProfLeftColumn"> 
             <form onSubmit={submitHandler}>
                 <div>
                     <label> First Name: </label>
@@ -102,6 +105,7 @@ const New = (props) => {
                     }
                     <input type="text"
                     name="licenseMain"
+                    placeholder='Real Estate License Number Here'
                     value={licenseMain}
                     onChange={ (e) => setLicenseMain( e.target.value ) }
                     />
@@ -132,11 +136,13 @@ const New = (props) => {
                     <input type="number"
                     name="cell"
                     value={cell}
+                    format="(###) ###-####" mask=""
+                    placeholder='Phone Number Here'
                     onChange={ (e) => setCell( e.target.value ) }
                     />
                 </div>
                 <div>
-                    <label> Website: </label>
+                    <label> Website (optional): </label>
                     {
                         errs.website ?
                         <span className="error-text">{errs.website.message}</span>
@@ -192,11 +198,20 @@ const New = (props) => {
                     />
                 </div>
                 <div>
+                <label> About: </label>
+                <input type="text"
+                name="about"
+                placeholder='Paste 100 Word-ish Length Summary of Experience'
+                value={about}
+                onChange={ (e) => setAbout( e.target.value ) }
+                />
+            </div>
+                <div>
                 <button type="submit">Create Profile</button>
                 <button onClick={ (e) => navigate("/")}>Cancel</button>
                 </div>
                 </form>
-            
+            </div>
         </div>
     )
 };
