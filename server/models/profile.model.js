@@ -40,7 +40,7 @@ const ProfileSchema = new mongoose.Schema({
     pictureUrl: { type: String },
 
     companyCurrent: {
-        type: String,  //this is the validation for a product
+        type: String, 
         required: [ true, ""],  //true - this is a required field, the 2nd part is the requirement
         enum: [
             '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
@@ -55,9 +55,95 @@ const ProfileSchema = new mongoose.Schema({
 
     about: {
         type: String,  //this is the validation for a profile
-        maxlength: [, "Sorry, the about section must be abreviated to be less than 1000 characters."],
+        maxlength: [1000, "Sorry, the 'About' section must be abreviated to be less than 1000 characters."],
     },
 
+    // The following are the agent deal statistics.
+    
+    buyerDeals21: {
+        type: Number,
+    },
+    sellerDeals21: {
+        type: Number,
+    },
+
+    avgDealDollar21: {
+        type: Number,
+    },
+
+    company21Logo: {
+        type: String, 
+        required: [ false, ""],  //prior years company not required
+        enum: [
+            '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
+            'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
+            'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
+            'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
+            'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
+            ],  
+    },
+
+    buyerDeals20: {
+        type: Number,
+    },
+    sellerDeals20: {
+        type: Number,
+    },
+    avgDealDollar20: {
+        type: Number,
+    },
+    company20Logo: {
+        type: String, 
+        required: [ false, ""],  //prior years company not required
+        enum: [
+            '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
+            'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
+            'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
+            'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
+            'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
+            ],  
+    },
+
+    buyerDeals19: {
+        type: Number,
+    },
+    sellerDeals19: {
+        type: Number,
+    },
+    avgDealDollar19: {
+        type: Number,
+    },
+    company19Logo: {
+        type: String, 
+        required: [ false, ""],  //prior years company not required
+        enum: [
+            '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
+            'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
+            'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
+            'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
+            'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
+            ],  
+    },
+    buyerDeals18: {
+        type: Number,
+    },
+    sellerDeals18: {
+        type: Number,
+    },
+    avgDealDollar18: {
+        type: Number,
+    },
+    company18Logo: {
+        type: String, 
+        required: [ false, ""],  //prior years company not required
+        enum: [
+            '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
+            'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
+            'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
+            'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
+            'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
+            ],  
+    },
 
 }, { timestamps: true }); // need it! this is the options of the Schema, required
 

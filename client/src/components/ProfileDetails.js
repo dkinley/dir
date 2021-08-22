@@ -28,11 +28,7 @@ const ProfileDetails = (props) => {
             </div>
             <div class="container">
             <img class="img" src={profile.pictureUrl} alt={profile.firstName} />
-                <div className="bio-btn"> 
-                    <div class="bio">What Others Say: { profile.firstName } handled my sale with the utmost care. It was a great experience working with { profile.firstName }. 
-                    Definitely one who helps you get what you want. We started with a couple of zoom calls rolling on. { profile.firstName } executed 
-                    the Listing tasks at super speed, guidance with remodeling, staging, working with Vendors, and transparency in 
-                    the whole process. { profile.firstName } is taking care of everything, like selling the family's own home.</div>
+                <div className="bio-btn"> {profile.about} 
                     <button className="buttonsCenter"><a href="tel:{profile.cell}">Call {profile.firstName}</a></button>
                     <button className="buttonsCenter"><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
                 </div>
@@ -42,28 +38,44 @@ const ProfileDetails = (props) => {
                     <table className="table">
                     <th>Year</th>
                     <th>Firm</th>
-                    <th>$Vol</th>
+                    <th>$ Volume</th>
                     <th>Deals</th>
                     <th>Buyers</th>
                     <th>Sellers</th>
                     <tr>
                         <td>
-                        Career
+                        Total of Recent
                         </td>
                         <td>
-                        <img src={profile.companyCurrent} alt={profile.companyCurrent}/>
+
                         </td>
                         <td>
-                        762,000,000
+                            { (((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21) 
+                            + ((profile.buyerDeals20 + profile.sellerDeals20) * profile.avgDealDollar20)
+                            + ((profile.buyerDeals19 + profile.sellerDeals19) * profile.avgDealDollar19)
+                            + ((profile.buyerDeals18 + profile.sellerDeals18) * profile.avgDealDollar18))
+                            }
                         </td>
                         <td>
-                        655
+                            { (((profile.buyerDeals21 + profile.sellerDeals21)) 
+                            + ((profile.buyerDeals20 + profile.sellerDeals20))
+                            + ((profile.buyerDeals19 + profile.sellerDeals19))
+                            + ((profile.buyerDeals18 + profile.sellerDeals18)))
+                            }
                         </td>
                         <td>
-                        301
+                                { (((profile.buyerDeals21)) 
+                                + ((profile.buyerDeals20))
+                                + ((profile.buyerDeals19))
+                                + ((profile.buyerDeals18)))
+                                }
                         </td>
                         <td>
-                        354
+                                { (((profile.sellerDeals21)) 
+                                + ((profile.sellerDeals20))
+                                + ((profile.sellerDeals19))
+                                + ((profile.sellerDeals18)))
+                                }
                         </td>
                     </tr>
                     <tr>
@@ -74,16 +86,16 @@ const ProfileDetails = (props) => {
                         { profile.companyCurrent }
                         </td>
                         <td>
-                        62,000,000
+                        { ((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21) }
                         </td>
                         <td>
-                        43
+                        { profile.buyerDeals21 + profile.sellerDeals21 }
                         </td>
                         <td>
-                        19
+                        { profile.buyerDeals21 }
                         </td>
                         <td>
-                        24
+                        { profile.sellerDeals21 }
                         </td>
                     </tr>
                     <tr>
@@ -91,63 +103,63 @@ const ProfileDetails = (props) => {
                         2020
                         </td>
                         <td>
-                        { profile.companyCurrent }
+                        { profile.company20Logo }
                         </td>
                         <td>
-                        55,000,000
+                        { ((profile.buyerDeals20 + profile.sellerDeals20) * profile.avgDealDollar20) }
                         </td>
                         <td>
-                        39
+                        { profile.buyerDeals20 + profile.sellerDeals20 }
                         </td>
                         <td>
-                        11
+                        { profile.buyerDeals20 }
                         </td>
                         <td>
-                        28
+                        { profile.sellerDeals20 }
                         </td>
                     </tr>
                     <tr>
-                    <td>
+                        <td>
                         2019
                         </td>
                         <td>
-                        { profile.companyCurrent }
+                        { profile.company19Logo }
                         </td>
                         <td>
-                        41,000,000
+                        { ((profile.buyerDeals19 + profile.sellerDeals19) * profile.avgDealDollar19) }
                         </td>
                         <td>
-                        30
+                        { profile.buyerDeals19 + profile.sellerDeals19 }
                         </td>
                         <td>
-                        10
+                        { profile.buyerDeals19 }
                         </td>
                         <td>
-                        20
+                        { profile.sellerDeals19 }
                         </td>
                     </tr>
                     <tr>
-                    <td>
+                        <td>
                         2018
                         </td>
                         <td>
-                        { profile.companyCurrent }
+                        { profile.company18Logo }
                         </td>
                         <td>
-                        39,000,000
+                        { ((profile.buyerDeals18 + profile.sellerDeals18) * profile.avgDealDollar18) }
                         </td>
                         <td>
-                        21
+                        { profile.buyerDeals18 + profile.sellerDeals18 }
                         </td>
                         <td>
-                        8
+                        { profile.buyerDeals18 }
                         </td>
                         <td>
-                        13
+                        { profile.sellerDeals18 }
                         </td>
                     </tr>
-                 </table>
-                 </div>
+                </table>
+                </div>
             </div>
             <div class="container">
                 <div className="bio-btn"> 
