@@ -39,20 +39,6 @@ const ProfileSchema = new mongoose.Schema({
 
     pictureUrl: { type: String },
 
-    companyCurrent: {
-        type: String, 
-        required: [ true, ""],  //true - this is a required field, the 2nd part is the requirement
-        enum: [
-            '@properties', 'Berkshire Hathaway HomeServices', 'Baird & Warner', 
-            'Century 21', 'Coldwell Banker Real Estate', 'Compass', 
-            'EXIT Realty', 'eXp Realty', 'Halstead Real Estate', 
-            'HomeServices of America', 'Keller Williams Realty', 'Rainmaker Real Estate', 
-            'Redfin', 'RE/MAX', 'Sotheby’s International Realty', 'Weichert', 'Other'
-            ], 
-    },
-
-    companyCurrentLogo: { type: String },
-
     about: {
         type: String,  //this is the validation for a profile
         maxlength: [1000, "Sorry, the 'About' section must be abreviated to be less than 1000 characters."],
@@ -71,7 +57,7 @@ const ProfileSchema = new mongoose.Schema({
         type: Number,
     },
 
-    company21Logo: {
+    company21: {
         type: String, 
         required: [ false, ""],  //prior years company not required
         enum: [
@@ -92,7 +78,7 @@ const ProfileSchema = new mongoose.Schema({
     avgDealDollar20: {
         type: Number,
     },
-    company20Logo: {
+    company20: {
         type: String, 
         required: [ false, ""],  //prior years company not required
         enum: [
@@ -113,7 +99,7 @@ const ProfileSchema = new mongoose.Schema({
     avgDealDollar19: {
         type: Number,
     },
-    company19Logo: {
+    company19: {
         type: String, 
         required: [ false, ""],  //prior years company not required
         enum: [
@@ -133,7 +119,7 @@ const ProfileSchema = new mongoose.Schema({
     avgDealDollar18: {
         type: Number,
     },
-    company18Logo: {
+    company18: {
         type: String, 
         required: [ false, ""],  //prior years company not required
         enum: [

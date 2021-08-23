@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import topLogo from '../topLogo.png';
 //import DeleteButton from './DeleteButton';
 import { Link, navigate } from '@reach/router';
 
@@ -21,6 +22,7 @@ const ProfileDetails = (props) => {
 
     return (
         <div>
+            <img src={topLogo}/>
             <div className="header">
                 <div className="upper-header">{ profile.firstName } { profile.lastName }  | Top 1% Agent</div>
                 <br/>
@@ -83,7 +85,7 @@ const ProfileDetails = (props) => {
                         2021
                         </td>
                         <td>
-                        { profile.companyCurrent }
+                        { profile.company21 }
                         </td>
                         <td>
                         { ((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21) }
@@ -103,7 +105,7 @@ const ProfileDetails = (props) => {
                         2020
                         </td>
                         <td>
-                        { profile.company20Logo }
+                        { profile.company20 }
                         </td>
                         <td>
                         { ((profile.buyerDeals20 + profile.sellerDeals20) * profile.avgDealDollar20) }
@@ -123,7 +125,7 @@ const ProfileDetails = (props) => {
                         2019
                         </td>
                         <td>
-                        { profile.company19Logo }
+                        { profile.company19 }
                         </td>
                         <td>
                         { ((profile.buyerDeals19 + profile.sellerDeals19) * profile.avgDealDollar19) }
@@ -143,7 +145,7 @@ const ProfileDetails = (props) => {
                         2018
                         </td>
                         <td>
-                        { profile.company18Logo }
+                        { profile.company18 }
                         </td>
                         <td>
                         { ((profile.buyerDeals18 + profile.sellerDeals18) * profile.avgDealDollar18) }
