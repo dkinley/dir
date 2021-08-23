@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import topLogo from '../topLogo.png';
+import topLogo from './topLogo.png';
 //import DeleteButton from './DeleteButton';
 import { Link, navigate } from '@reach/router';
 
@@ -20,13 +20,17 @@ const ProfileDetails = (props) => {
             });
         }, [props.id ]);
 
-    return (
+    return (    
         <div>
-            <img src={topLogo}/>
             <div className="header">
-                <div className="upper-header">{ profile.firstName } { profile.lastName }  | Top 1% Agent</div>
+                <div> 
+                    <div className="upper-header">
+                        <img class="imgSmall" src={topLogo}/>
+                        { profile.firstName } { profile.lastName }                       
+                    </div>
+                </div>
                 <br/>
-                <div className="lower-header"> { profile.licenseMainState } License { profile.licenseMain } at { profile.companyCurrent }</div>
+                <div className="lower-header"> { profile.licenseMainState } License { profile.licenseMain } at { profile.company21 }</div>
             </div>
             <div class="container">
             <img class="img" src={profile.pictureUrl} alt={profile.firstName} />
