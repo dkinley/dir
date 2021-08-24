@@ -23,14 +23,20 @@ const ProfileDetails = (props) => {
     return (    
         <div>
             <div className="header">
-                <div> 
+            <img class="imgSmall" src={topLogo}/>    
+            <div> 
                     <div className="upper-header">
-                        <img class="imgSmall" src={topLogo}/>
-                        { profile.firstName } { profile.lastName }                       
+                        { profile.firstName } { profile.lastName } 
                     </div>
-                </div>
-                <br/>
-                <div className="lower-header"> { profile.licenseMainState } License { profile.licenseMain } at { profile.company21 }</div>
+                    <br/>
+                    <div className="lower-header"> 
+                        { profile.licenseMainState } License { profile.licenseMain }
+                    </div>
+                    <div className="lower-header">
+                        { profile.company21 }
+                    </div>                      
+            </div>
+                
             </div>
             <div class="container">
             <img class="img" src={profile.pictureUrl} alt={profile.firstName} />
@@ -56,10 +62,11 @@ const ProfileDetails = (props) => {
 
                         </td>
                         <td>
-                            { (((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21) 
+                            { ((((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21) 
                             + ((profile.buyerDeals20 + profile.sellerDeals20) * profile.avgDealDollar20)
                             + ((profile.buyerDeals19 + profile.sellerDeals19) * profile.avgDealDollar19)
                             + ((profile.buyerDeals18 + profile.sellerDeals18) * profile.avgDealDollar18))
+                            )/1000000 + " Million"
                             }
                         </td>
                         <td>
@@ -92,7 +99,9 @@ const ProfileDetails = (props) => {
                         { profile.company21 }
                         </td>
                         <td>
-                        { ((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21) }
+                        { (((profile.buyerDeals21 + profile.sellerDeals21) * profile.avgDealDollar21)
+                            )/1000000 + " Million"
+                        }
                         </td>
                         <td>
                         { profile.buyerDeals21 + profile.sellerDeals21 }
@@ -112,7 +121,9 @@ const ProfileDetails = (props) => {
                         { profile.company20 }
                         </td>
                         <td>
-                        { ((profile.buyerDeals20 + profile.sellerDeals20) * profile.avgDealDollar20) }
+                        { (((profile.buyerDeals20 + profile.sellerDeals20) * profile.avgDealDollar20)
+                            )/1000000 + " Million" 
+                        }
                         </td>
                         <td>
                         { profile.buyerDeals20 + profile.sellerDeals20 }
@@ -132,7 +143,8 @@ const ProfileDetails = (props) => {
                         { profile.company19 }
                         </td>
                         <td>
-                        { ((profile.buyerDeals19 + profile.sellerDeals19) * profile.avgDealDollar19) }
+                        { (((profile.buyerDeals19 + profile.sellerDeals19) * profile.avgDealDollar19)
+                            )/1000000 + " Million" }
                         </td>
                         <td>
                         { profile.buyerDeals19 + profile.sellerDeals19 }
@@ -152,7 +164,9 @@ const ProfileDetails = (props) => {
                         { profile.company18 }
                         </td>
                         <td>
-                        { ((profile.buyerDeals18 + profile.sellerDeals18) * profile.avgDealDollar18) }
+                        { (((profile.buyerDeals18 + profile.sellerDeals18) * profile.avgDealDollar18) 
+                            )/1000000 + " Million"
+                        }
                         </td>
                         <td>
                         { profile.buyerDeals18 + profile.sellerDeals18 }
@@ -170,7 +184,7 @@ const ProfileDetails = (props) => {
             <div class="container">
                 <div className="bio-btn"> 
                     <button className="buttonsCenter" onClick={ () => navigate("/")}>____________________</button>
-                    <div className="center">Copyright ©2021, Leaderboard, Inc. All Rights Reserved.</div> 
+                    <div className="center">Copyright ©2021, Leaderboards, Inc. All Rights Reserved.</div> 
                 </div>
             </div>
             </div>

@@ -374,7 +374,7 @@ const New = (props) => {
                 }
             </select>
             </div>
-          </div>
+            </div>
                 <div>
                     <button type="submit">Create Profile</button>
                     <button onClick={ (e) => navigate("/")}>Cancel</button>

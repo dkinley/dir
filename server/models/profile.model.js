@@ -52,7 +52,6 @@ const ProfileSchema = new mongoose.Schema({
     sellerDeals21: {
         type: Number,
     },
-
     avgDealDollar21: {
         type: Number,
     },
