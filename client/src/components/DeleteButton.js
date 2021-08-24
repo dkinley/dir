@@ -3,12 +3,13 @@ import axios from 'axios';
 import { navigate } from '@reach/router';
 
 const DeleteButton = (props) => {
-    const [ profileId, setProfileId ] = useState (props.id);
-    const deleteProfile = (profileId) => {
-        axios.delete(`http://localhost:8000/api/profile/${ profileId }`)
+    const [ profileID, setProfileID ] = useState (props.id);
+    const [ allProfiles, setAllProfiles ] = useState (props.id);
+    const deleteProfile = (profileID) => {
+        axios.delete(`http://localhost:8000/api/profile/${ profileID }`)
             .then((res) => {
                 console.log(res.data);
-                // setAllSongs(allSongs.filter((songElement) => songElement._id !== songID))
+                setAllProfiles(allProfiles.filter((profileElement) => profileElement._id !== profileID))
                 navigate('/');
             })
             .catch((err) => {
