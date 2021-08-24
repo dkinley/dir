@@ -50,10 +50,10 @@ const ProfileDetails = (props) => {
                     <table className="table">
                     <th>Year</th>
                     <th>Firm</th>
-                    <th>$ Volume</th>
+                    <th>$Volume</th>
                     <th>Deals</th>
-                    <th>Buyers</th>
-                    <th>Sellers</th>
+                    <th>Buys</th>
+                    <th>Sells</th>
                     <tr>
                         <td>
                         Total of Recent
