@@ -8,6 +8,7 @@ const New = (props) => {
     const [ licenseMain, setLicenseMain ] = useState();
     const [ licenseMainState, setLicenseMainState ] = useState();
     const [ cell, setCell ] = useState();
+    const [ email, setEmail ] = useState();
     const [ website, setWebsite ] = useState();
     const [ pictureUrl, setPictureUrl ] = useState();
     const [ about, setAbout] = useState(); 
@@ -59,6 +60,7 @@ const New = (props) => {
             licenseMain: licenseMain,
             licenseMainState: licenseMainState,
             cell: cell,
+            email: email,
             website: website,
             pictureUrl: pictureUrl,
             about: about,
@@ -172,6 +174,19 @@ const New = (props) => {
                         format="(###) ###-####" mask=""
                         placeholder='Phone Number Here'
                         onChange={ (e) => setCell( e.target.value ) }
+                        />
+                    </div>
+                    <div>
+                        <label> Email: </label>
+                        {
+                            errs.email ?
+                            <span className="error-text">{errs.email.message}</span>
+                                : null
+                        }
+                        <input type="text"
+                        name="email"
+                        value={email}
+                        onChange={ (e) => setEmail( e.target.value ) }
                         />
                     </div>
                     <div>

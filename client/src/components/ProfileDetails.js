@@ -42,7 +42,7 @@ const ProfileDetails = (props) => {
             <img class="img" src={profile.pictureUrl} alt={profile.firstName} />
                 <div className="bio-btn"> {profile.about} 
                     <button className="buttonsCenter"><a href="tel:{profile.cell}">Call {profile.firstName}</a></button>
-                    <button className="buttonsCenter"><a href="mailto:{profile.website}">Email {profile.firstName}</a></button>
+                    <button className="buttonsCenter"><a href="mailto:{profile.email}">Email {profile.firstName}</a></button>
                 </div>
             </div>
             <div className="container">

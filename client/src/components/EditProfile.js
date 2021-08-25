@@ -9,6 +9,7 @@ const Edit = (props) => {
     const [ licenseMain, setLicenseMain ] = useState();
     const [ licenseMainState, setLicenseMainState ] = useState();
     const [ cell, setCell ] = useState();
+    const [ email, setEmail ] = useState();
     const [ website, setWebsite ] = useState();
     const [ pictureUrl, setPictureUrl ] = useState();
     const [ about, setAbout] = useState(); 
@@ -57,6 +58,7 @@ const Edit = (props) => {
                 setLicenseMain(profile.licenseMain);
                 setLicenseMainState(profile.licenseMainState);
                 setCell(profile.cell);
+                setEmail(profile.email);
                 setWebsite(profile.setWebsite);
                 setPictureUrl(profile.pictureUrl);
                 setAbout(profile.about); 
@@ -198,6 +200,19 @@ const Edit = (props) => {
                         <span className="error-text">{errs.cell.message}</span>
                             : null
                     }
+                </div>
+                <div>
+                    <label> Email: </label>
+                    {
+                        errs.email ?
+                        <span className="error-text">{errs.email.message}</span>
+                            : null
+                    }
+                    <input type="text"
+                    name="email"
+                    value={email}
+                    onChange={ (e) => setEmail( e.target.value ) }
+                    />
                 </div>
                 <div>
                     <label> Website: </label>

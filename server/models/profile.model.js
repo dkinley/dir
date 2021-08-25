@@ -29,7 +29,7 @@ const ProfileSchema = new mongoose.Schema({
         type: Number,
     },
 
-    emailMain: {
+    email: {
         type: String,
     },
 
