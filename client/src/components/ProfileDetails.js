@@ -183,7 +183,6 @@ const ProfileDetails = (props) => {
             </div>
             <div class="container">
                 <div className="bio-btn"> 
-                    <button className="buttonsCenter" onClick={ () => navigate("/")}>____________________</button>
                     <div className="center">Copyright ©2021, Leaderboards, Inc. All Rights Reserved.</div> 
                 </div>
             </div>

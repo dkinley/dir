@@ -20,6 +20,7 @@ const GetAll = (props) => {
 
     return (
         <div>
+            <h2>* Admin Console * </h2>
             <table>
                 <thead>
                     <th>Profile</th>
