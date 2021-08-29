@@ -12,6 +12,7 @@
   align-items: center;
 }
 
+/* header */
 .header {
   width: auto;
   margin: 10px 10px 10px 10px;
@@ -49,6 +50,7 @@
   color:  #545557;
 }
 
+/* hero */
 .profile-pic-deets {
   display: flex;
   align-items: center;
@@ -67,7 +69,6 @@
   font-weight:bolder;
   margin-top: 5px;
 }
-
 .center {
   display: flex;
   flex-direction: column;
@@ -80,7 +81,7 @@
 
 .buttonsCenter {
   display: block;
-  width: 100%;
+  width: 50%;
   border: none;
   color: white;
   padding: 0px 28px;
@@ -118,6 +119,7 @@ h2 {
   color: #606164;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+/* content */
 
 table {
   width: auto;
@@ -239,6 +241,11 @@ hr {
   flex-wrap: wrap;
   box-sizing: border-box; 
   margin-bottom: 0px;
+}
 
+.super-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 

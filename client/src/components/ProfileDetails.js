@@ -21,7 +21,7 @@ const ProfileDetails = (props) => {
         }, [props.id ]);
 
     return (    
-        <div>
+        <div class="super-container">
             <div className="header">
             <img class="imgSmall" src={topLogo}/>    
             <div> 
