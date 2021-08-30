@@ -94,6 +94,7 @@ const Edit = (props) => {
             licenseMain: licenseMain,
             licenseMainState: licenseMainState,
             cell: cell,
+            email: email,
             website: website,
             pictureUrl: pictureUrl,
             about: about,
@@ -132,7 +133,7 @@ const Edit = (props) => {
     }
 
     return (
-        <div>
+        <div className="super-container">
             <h1>Edit Profile</h1> 
             <form onSubmit={submitHandler}>
             <div className="container">
@@ -415,16 +416,14 @@ const Edit = (props) => {
     </select>
     </div>
     </div>
-
-
-
-
-                <div>
-                <button type="submit">Update Profile</button>
-                <button onClick={ () => navigate("/")}>Cancel</button>
-                <DeleteButton className="deleteBtn" _id={ "/profile/" + props.id }/>
-                </div>
-            </form>
+            <div>
+            <button type="submit">Update</button>
+            <button onClick={ () => navigate("/profile/" + props.id)}>View</button>
+            <Link to={"/profile/new"} className="link">New</Link>
+            <Link to={"/"} className="link">Back</Link>
+            <DeleteButton _id={ props.id }/>
+            </div>
+        </form>
         </div>
     )
 };

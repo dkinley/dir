@@ -19,29 +19,36 @@ const GetAll = (props) => {
     }, []);
 
     return (
-        <div>
-            <h2>* Admin Console * </h2>
+        <div className="super-container">
+            <h1>* Admin Console * </h1>
             <table>
                 <thead>
-                    <th>Profile</th>
-                    <th>Remove</th>
+                    <th></th>
                 </thead>
                 <tbody>
+                <div>
                     {
                         allProfiles.map((profile, index) => (
                         <tr>
                             <td>
                                 <img src={profile.pictureUrl} alt={profile.firstName}/>
                                 <br/>
-                                <Link to={ `/profile/${profile._id}`} >{profile.firstName}{" "}{profile.lastName} </Link>
-                                <p>Top Producer</p>
+                                <br/>
+                                <br/>
+                                <Link to={ `/profile/${profile._id}/edit`}style={{fontSize: "large"}} className="link">{"Edit "}{profile.firstName}{" "}{profile.lastName}{"'s Profile"}</Link>
+                                <br/>
+                                <br/>
+                                <br/>
                             </td>
-                            <DeleteButton _id={ profile._id }/>
                         </tr>
+                        
                         ))
                     }
+                </div>
                 </tbody>
             </table>
+            <br/>
+            <Link to={"/profile/new"} className="link">Click Here to Create a New Profile</Link>
         </div>
     )
 };

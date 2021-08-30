@@ -17,7 +17,7 @@ const DeleteButton = (props) => {
             });
     }
     return (
-        <button onClick={ () => deleteProfile(props._id) }>Delete</button>
+        <button onClick={ () => deleteProfile(props._id)}>Delete</button>
     )
 }
 

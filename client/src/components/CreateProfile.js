@@ -98,7 +98,7 @@ const New = (props) => {
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>New Profile</h1>
             <div className="createProfLeftColumn"> 
             <form onSubmit={submitHandler}>
