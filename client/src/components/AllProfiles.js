@@ -1,3 +1,4 @@
+import '../App.css';
 import React, { useEffect, useState } from 'react';
 import { Link, navigate } from '@reach/router';
 import axios from 'axios';
